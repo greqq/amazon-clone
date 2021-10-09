@@ -15,7 +15,7 @@ function Checkout() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
   const [session] = useSession();
-
+  console.log(typeof process.env.stripe_public_key);
   const createCheckoutSession = async () => {
     const stripe = await stripePromise;
 
